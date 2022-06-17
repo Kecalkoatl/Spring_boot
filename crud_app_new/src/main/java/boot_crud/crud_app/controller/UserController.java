@@ -16,12 +16,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/welcome")
-    public String homepage() {
-        return "Hello, friend!";
-    }
-
-
     @GetMapping()
     public String getAllUsers(Model model) {
         model.addAttribute("userList", userService.getAllUsers());
